@@ -1,0 +1,18 @@
+[user]
+	name = Chris Thomas
+	email = {{ .email | quote }}
+	signingkey = 85450BE38C34576B
+[core]
+	excludesfile = /Users/{{ .chezmoi.username }}/.gitignore_global
+[commit]
+	gpgsign = true
+	template = /Users/{{ .chezmoi.username }}/.stCommitMsg
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
