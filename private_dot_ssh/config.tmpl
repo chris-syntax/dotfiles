@@ -1,0 +1,36 @@
+{{- if eq .chezmoi.hostname "Chris-Work" }}
+IdentityFile ~/.ssh/work.pub
+{{- else}}
+IdentityFile ~/.ssh/personal.pub
+{{- end }}
+
+Host *
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    IgnoreUnknown UseKeychain
+    UseKeychain yes
+    AddKeysToAgent yes
+    ForwardAgent yes
+    ForwardX11 yes
+    IdentitiesOnly yes
+
+
+Host work-github github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/work.pub
+
+Host work-gist github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/work.pub
+
+Host personal-github github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/personal.pub
+
+Host personal-gist github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/personal.pub
+
