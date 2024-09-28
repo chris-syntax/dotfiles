@@ -111,4 +111,5 @@ $env.CARGO_HOME = $"($env.HOME)/.cargo"
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
+source ($nu.default-config-dir | path join 'secrets.nu')
 zoxide init nushell | save -f ~/.zoxide.nu
