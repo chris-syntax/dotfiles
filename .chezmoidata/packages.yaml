@@ -1,0 +1,17 @@
+packages:
+  darwin:
+    brews:
+      - "chezmoi"
+      - "helix"
+      - "neovim"
+      - "nushell"
+      - "starship"
+      - "zoxide"
+    casks:
+      - "1password"
+      - "1password-cli"
+      - "arc"
+      - "font-fira-code-nerd-font"
+      - "gpg-suite-no-mail"
+      - "kitty"
+      - "zed"
