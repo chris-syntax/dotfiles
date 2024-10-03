@@ -2,6 +2,7 @@ packages:
   darwin:
     brews:
       - "chezmoi"
+      - "git-delta"
       - "helix"
       - "neovim"
       - "nushell"

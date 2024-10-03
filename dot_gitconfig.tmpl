@@ -3,10 +3,19 @@
 	email = {{ .email | quote }}
 	signingkey = 85450BE38C34576B
 [core]
+  pager = delta
 	excludesfile = /Users/{{ .chezmoi.username }}/.gitignore_global
+[interactive]
+  diffFilter = delta --color-only
 [commit]
 	gpgsign = true
 	template = /Users/{{ .chezmoi.username }}/.stCommitMsg
+[delta]
+  navigate = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
 [pull]
 	rebase = false
 [push]
