@@ -13,13 +13,17 @@ packages:
       - "1password"
       - "1password-cli"
       - "arc"
+      - "chai"
       - "clion"
+      - "discord"
       - "firefox"
       - "font-fira-code-nerd-font"
       - "gpg-suite-no-mail"
       - "iina"
       - "kitty"
+      - "openlens"
       - "rubymine"
+      - "windows-app"
       - "zed"
 personal:
   darwin:
@@ -33,5 +37,13 @@ personal:
 work:
   darwin:
     brews:
+      - "docker"
     casks:
+      - "adobe-acrobat-reader"
+      - "bitwarden"
+      - "visual-studio-code"
+      - "docker"
+      - "inkscape"
       - "pycharm-ce"
+      - "slack"
+      - "zoom"
