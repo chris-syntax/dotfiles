@@ -8,5 +8,22 @@ brew {{ . | quote }}
 {{ range .packages.darwin.casks -}}
 cask {{ . | quote }}
 {{ end -}}
+{{ if eq .ownership "personal" -}}
+{{ range .personal.darwin.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .personal.darwin.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ end }}
+{{ if eq .ownership "work" -}}
+{{ range .work.darwin.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .work.darwin.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ end }}
+
 EOF
 {{ end -}}

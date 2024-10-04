@@ -5,13 +5,32 @@ packages:
       - "helix"
       - "neovim"
       - "nushell"
+      - "rustup"
       - "starship"
       - "zoxide"
     casks:
       - "1password"
       - "1password-cli"
       - "arc"
+      - "clion"
+      - "firefox"
       - "font-fira-code-nerd-font"
       - "gpg-suite-no-mail"
+      - "iina"
       - "kitty"
+      - "rubymine"
       - "zed"
+personal:
+  darwin:
+    brews:
+      - "yt-dlp"
+    casks:
+      - "makemkv"
+      - "rider"
+      - "rustrover"
+      - "unity"
+work:
+  darwin:
+    brews:
+    casks:
+      - "pycharm-ce"
