@@ -9,6 +9,7 @@ packages:
       - "rustup"
       - "starship"
       - "zoxide"
+      - "zellij"
     casks:
       - "1password"
       - "1password-cli"
