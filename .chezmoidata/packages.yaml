@@ -20,6 +20,7 @@ packages:
       - "chai"
       - "clion"
       - "discord"
+      - "docker"
       - "firefox"
       - "font-fira-code-nerd-font"
       - "gpg-suite-no-mail"
@@ -32,21 +33,22 @@ packages:
 personal:
   darwin:
     brews:
+      - "stripe-cli"
       - "yt-dlp"
     casks:
       - "makemkv"
       - "rider"
       - "rustrover"
+      - "steam"
+      - "whisky"
       - "unity"
 work:
   darwin:
     brews:
-      - "docker"
     casks:
       - "adobe-acrobat-reader"
       - "bitwarden"
       - "visual-studio-code"
-      - "docker"
       - "inkscape"
       - "pycharm-ce"
       - "slack"
