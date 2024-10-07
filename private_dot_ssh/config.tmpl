@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.hostname "Chris-Work" }}
+{{- if eq .ownership "work" }}
 IdentityFile ~/.ssh/work.pub
 {{- else}}
 IdentityFile ~/.ssh/personal.pub
