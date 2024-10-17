@@ -4,6 +4,8 @@ packages:
       - "chezmoi"
       - "git-delta"
       - "helix"
+      - "hivemind"
+      - "lazygit"
       - "neovim"
       - "nodenv"
       - "nushell"
@@ -29,7 +31,7 @@ packages:
       - "kitty"
       - "openlens"
       - "rubymine"
-      - "windows-app"
+      #- "windows-app"
       - "zed"
 personal:
   darwin:
