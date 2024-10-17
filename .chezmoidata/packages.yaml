@@ -16,6 +16,7 @@ packages:
     casks:
       - "1password"
       - "1password-cli"
+      - "aerospace"
       - "arc"
       - "chai"
       - "clion"
