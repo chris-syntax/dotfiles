@@ -2,10 +2,12 @@ packages:
   darwin:
     brews:
       - "chezmoi"
+      - "gh"
       - "git-delta"
       - "helix"
       - "hivemind"
       - "lazygit"
+      - "lnav"
       - "neovim"
       - "nodenv"
       - "nushell"
