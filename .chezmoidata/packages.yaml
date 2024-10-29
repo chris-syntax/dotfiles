@@ -1,8 +1,10 @@
 packages:
   darwin:
     taps:
+      - "FelixKratz/formulae"
       - "nikitabobko/tap"
     brews:
+      - "borders"
       - "chezmoi"
       - "gh"
       - "git-delta"
