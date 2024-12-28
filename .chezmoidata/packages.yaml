@@ -34,6 +34,7 @@ packages:
       - "font-fira-code-nerd-font"
       - "gpg-suite-no-mail"
       - "iina"
+      - "keymapp"
       - "kitty"
       - "openlens"
       - "rubymine"
@@ -54,6 +55,7 @@ personal:
 work:
   darwin:
     brews:
+      - "awscli"
     casks:
       - "adobe-acrobat-reader"
       - "bitwarden"
