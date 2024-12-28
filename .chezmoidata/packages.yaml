@@ -45,6 +45,8 @@ personal:
       - "stripe-cli"
       - "yt-dlp"
     casks:
+      - "obs"
+      - "handbrake"
       - "makemkv"
       - "rider"
       - "rustrover"
