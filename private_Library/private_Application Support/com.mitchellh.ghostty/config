@@ -1,0 +1,12 @@
+theme = tokyonight_night
+macos-titlebar-style = hidden
+window-decoration = false
+window-padding-x = 8
+window-padding-y = 8
+background-opacity = 0.85
+background-blur-radius = 20
+font-family = "FiraCode Nerd Font Mono"
+font-size = 16
+shell-integration = detect
+command = /opt/homebrew/bin/nu
+keybind = global:opt+space=toggle_quick_terminal

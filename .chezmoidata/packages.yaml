@@ -33,6 +33,7 @@ packages:
       - "docker"
       - "firefox"
       - "font-fira-code-nerd-font"
+      - "ghostty"
       - "gpg-suite-no-mail"
       - "iina"
       - "keymapp"
