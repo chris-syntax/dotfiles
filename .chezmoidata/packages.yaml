@@ -4,12 +4,10 @@ packages:
       - "FelixKratz/formulae"
       - "nikitabobko/tap"
     brews:
-      - "borders"
       - "chezmoi"
       - "ffmpeg"
       - "gh"
       - "git-delta"
-      - "helix"
       - "hivemind"
       - "lazygit"
       - "libyaml"
@@ -20,42 +18,38 @@ packages:
       - "postgresql@17"
       - "rustup"
       - "starship"
-      - "zellij"
       - "zoxide"
     casks:
       - "1password"
       - "1password-cli"
       - "aerospace"
-      - "arc"
       - "chai"
-      - "clion"
       - "discord"
       - "docker"
-      - "firefox"
       - "font-fira-code-nerd-font"
       - "ghostty"
       - "gpg-suite-no-mail"
       - "iina"
       - "keymapp"
-      - "kitty"
       - "openlens"
       - "rubymine"
-      #- "windows-app"
-      - "zed"
+      - "zen-browser"
 personal:
   darwin:
     brews:
       - "stripe-cli"
       - "yt-dlp"
     casks:
+      - "aegisub"
       - "obs"
       - "handbrake"
       - "makemkv"
-      - "rider"
+      - "mkvtoolnix"
+      - "moonlight"
+      - "rustdesk"
       - "rustrover"
       - "steam"
       - "whisky"
-      - "unity"
 work:
   darwin:
     brews:
@@ -63,7 +57,6 @@ work:
     casks:
       - "adobe-acrobat-reader"
       - "bitwarden"
-      - "visual-studio-code"
       - "inkscape"
       - "pycharm-ce"
       - "slack"
