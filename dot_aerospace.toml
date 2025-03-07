@@ -218,3 +218,8 @@ run = "move-node-to-workspace 10"
 [[on-window-detected]]
 if.app-id = "com.tinyspeck.slackmacgap"
 run = "move-node-to-workspace 10"
+
+[[on-window-detected]]
+if.app-id = "app.zen-browser.zen"
+if.window-title-regex-substring = "Picture-in-Picture"
+run = 'layout floating'
