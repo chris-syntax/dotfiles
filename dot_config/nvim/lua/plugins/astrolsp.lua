@@ -37,7 +37,7 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      "ruby_lsp"
+      "ruby_lsp",
       -- "pyright"
     },
     -- customize language server configuration options passed to `lspconfig`
@@ -48,12 +48,13 @@ return {
           "mise",
           "x",
           "--",
-          "ruby-lsp"
+          "ruby-lsp",
         },
         capabilities = {
-          codelens = true
-        }
-      }
+          codelens = true,
+        },
+        root_dir = require("lspconfig.util").root_pattern("Gemfile", ".ruby-version", ".git"),
+      },
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
     -- customize how language servers are attached

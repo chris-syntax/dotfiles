@@ -927,3 +927,5 @@ def "git log" [n: int = 50] {
 def "git reflog" [n: int = 50] {
   ^git reflog -n $n | parse "{commit} {branch}: {action}: {description}"
 }
+
+use ($nu.default-config-dir | path join mise.nu)

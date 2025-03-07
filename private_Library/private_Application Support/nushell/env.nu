@@ -98,7 +98,6 @@ $env.NU_PLUGIN_DIRS = [
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/usr/local/bin')
 $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.local/bin")
-$env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.local/share/mise/shims")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.yarn/bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.config/yarn/global/node_modules/.bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.cargo/bin")
@@ -112,3 +111,6 @@ $env.CARGO_HOME = $"($env.HOME)/.cargo"
 # source ($nu.default-config-dir | path join 'custom.nu')
 source ($nu.default-config-dir | path join 'secrets.nu')
 zoxide init nushell | save -f ~/.zoxide.nu
+
+let mise_path = $nu.default-config-dir | path join mise.nu
+^mise activate nu | save $mise_path --force
