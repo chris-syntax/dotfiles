@@ -49,6 +49,9 @@ return {
           "x",
           "--",
           "ruby-lsp"
+        },
+        capabilities = {
+          codelens = true
         }
       }
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
