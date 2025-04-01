@@ -26,6 +26,7 @@ packages:
       - "chai"
       - "discord"
       - "docker"
+      - "firefox"
       - "font-fira-code-nerd-font"
       - "ghostty"
       - "gpg-suite-no-mail"
@@ -33,7 +34,6 @@ packages:
       - "keymapp"
       - "openlens"
       - "rubymine"
-      - "zen-browser"
 personal:
   darwin:
     brews:
