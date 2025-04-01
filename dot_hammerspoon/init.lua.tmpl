@@ -1,0 +1,8 @@
+require("hs.ipc")
+
+hs.screen.watcher
+	.new(function()
+		hs.alert.show("Screen Configuration Changed")
+		hs.task.new("/Users/{{ .chezmoi.username }}/.scripts/on_monitor_change.nu", nil):start()
+	end)
+	:start()
