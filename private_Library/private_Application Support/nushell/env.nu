@@ -106,6 +106,7 @@ $env.AWS_DEFAULT_PROFILE = "syntax-testing"
 $env.EDITOR = "nvim"
 $env.PSQL_PAGER = "pspg -X -b"
 $env.CARGO_HOME = $"($env.HOME)/.cargo"
+$env.GUIA_MARKDOWN = "glow"
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')

@@ -8,6 +8,7 @@ packages:
       - "ffmpeg"
       - "gh"
       - "git-delta"
+      - "glow"
       - "hivemind"
       - "lazygit"
       - "libyaml"
@@ -36,6 +37,7 @@ packages:
       - "keymapp"
       - "openlens"
       - "rubymine"
+      - "obsidian"
 personal:
   darwin:
     brews:
