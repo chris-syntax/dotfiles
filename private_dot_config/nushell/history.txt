@@ -1,0 +1,630 @@
+ls
+yay -S carapace-bin
+exit
+which carapcace
+which carapace 
+ls
+firefox
+ls
+nvim $nu.config-path
+$nu.config-path
+$nu.env-path
+nvim $nu.env-path
+nvim $nu.login
+nvim $nu.loginshell-path
+$nu.loginshell-path
+ls
+^ls
+which zsh
+yay -S zsh
+ls
+nvim $nu.env-path
+exit
+ls
+cd Kanagawa-GKT-Theme/
+ls
+git status
+carapace --list --all
+carapace --list --all git
+carapace --list --all dkms
+carapace --list --all yay
+carapace --list --all | wc
+$env
+exit
+ls
+carapace _carapace nushell
+nvim $nu.env-path
+help config env
+exit
+mkdir
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+ls ~/.cache/carapace/
+cat ~/.cache/carapace/init.nu
+nvim $nu.env-path
+exit
+yay -S grim wl-clipboard
+cd ~/.config/hypr/
+nvim .
+cd ../
+ls
+mkdir hakone
+cd hakone/
+ls
+nvim .
+chmod +x hypr-scripts/screenshot.nu 
+ls
+./hypr-scripts/screenshot.nu
+cd ~/.config/hypr/bindings/
+cd ../
+nvim .
+cd ~/Kanagawa-GKT-Theme/
+ls
+grim - | magick - -auto-gamma -auto-level -modulate 100,90,100 png:- | wl-copy --type image/png
+grim -t ppm - \<\n>| ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - \<\n>  -vf "zscale=primaries=bt2020:transfer=smpte2084:matrix=bt2020nc,tonemap=hable:desat=0:param=0.6:npl=100, \<\n>       zscale=primaries=bt709:transfer=bt709:matrix=bt709,eq=saturation=1.25" \<\n>  -f image2pipe -vcodec png - \<\n>| wl-copy --type image/png<\n>
+grim -t ppm - \<\n>| ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primaries=bt2020:transfer=smpte2084:matrix=bt2020nc,tonemap=hable:desat=0:param=0.6:npl=100, zscale=primaries=bt709:transfer=bt709:matrix=bt709,eq=saturation=1.25" -f image2pipe -vcodec png - <\n>| wl-copy --type image/png
+grim -t ppm - | ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primaries=bt2020:transfer=smpte2084:matrix=bt2020nc,tonemap=hable:desat=0:param=0.6:npl=100, zscale=primaries=bt709:transfer=bt709:matrix=bt709,eq=saturation=1.25" -f image2pipe -vcodec png - <\n>| wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primaries=bt2020:transfer=smpte2084:matrix=bt2020nc,tonemap=hable:desat=0:param=0.6:npl=120,zscale=primaries=bt709:transfer=bt709:matrix=bt709,eq=saturation=1.3" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primaries=bt2020:transfer=smpte2084:matrix=bt2020nc,tonemap=hable:desat=0:param=0.6,zscale=primaries=bt709:transfer=bt709:matrix=bt709,eq=saturation=1.3" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=full,tonemap=hable:desat=0:param=0.6,zscale=primaries=bt709:transfer=bt709:matrix=bt709:range=full,eq=saturation=1.3" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t png - | ^magick - -colorspace sRGB -auto-level -auto-gamma -sigmoidal-contrast 8x50% -modulate 100,135,100 png:- | ^wl-copy --type image/png
+^grim -t png - | ^magick - -colorspace sRGB -auto-gamma -sigmoidal-contrast 8x40% -modulate 85,135,100 -clamp png:- | ^wl-copy --type image/png
+^grim -t png - | ^magick - -colorspace sRGB -level 0,82%,1.05 -sigmoidal-contrast 5x35% -modulate 92,130,100 -clamp png:- | ^wl-copy --type image/png
+yay -S ffmpeg
+^grim -t png - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec png -i - -vf "zscale=transferin=smpte2084:transfer=linear,tonemap=hable:param=0.55,zscale=transfer=bt709,eq=saturation=1.30" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=pc:primaries=bt2020:transfer=linear:matrix=bt2020nc:range=pc,tonemap=hable:param=0.5:desat=0,zscale=primaries=bt709:transfer=bt709:matrix=bt709:range=pc,eq=saturation=1.30" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=pc:primaries=bt2020:transfer=linear:matrix=bt2020nc:range=pc,tonemap=hable:param=0.60:desat=0,zscale=primaries=bt709:transfer=bt709:matrix=bt709:range=pc,eq=gamma=1.06:contrast=1.05:saturation=1.35" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=pc:primaries=bt2020:transfer=linear:matrix=bt2020nc:range=pc,tonemap=hable:param=0.55:desat=0,zscale=primaries=bt709:transfer=bt709:matrix=bt709:range=pc,eq=gamma=1.03:contrast=1.03:saturation=1.45" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=pc:primaries=bt2020:transfer=linear:matrix=bt2020nc:range=pc,tonemap=hable:param=0.55:desat=0,zscale=primaries=bt709:transfer=iec61966-2-1:matrix=bt709:range=pc,curves=preset=medium_contrast,hue=s=1.40,format=rgb24" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=pc:primaries=bt2020:transfer=linear:matrix=bt2020nc:range=pc,tonemap=hable:param=0.70:desat=0,zscale=primaries=bt709:transfer=iec61966-2-1:matrix=bt709:range=pc,eq=brightness=0.06:contrast=1.08:saturation=1.40,format=rgb24" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=pc:primaries=bt2020:transfer=linear:matrix=bt2020nc:range=pc,tonemap=mobius:param=0.30:desat=0,zscale=primaries=bt709:transfer=iec61966-2-1:matrix=bt709:range=pc,eq=brightness=0.04:contrast=1.06:saturation=1.45,format=rgb24" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=pc:primaries=bt2020:transfer=linear:matrix=bt2020nc:range=pc,tonemap=hable:param=0.55:desat=0,zscale=primaries=bt709:transfer=iec61966-2-1:matrix=bt709:range=pc,curves=preset=medium_contrast,hue=s=1.40,format=rgb24" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+cd ~/.config/hypr
+nvim .
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu 
+cd ~/.config/hakone/hypr-scripts/screenshot.nu
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "unsharp=5:5:0.8,format=gbrpf32le,zscale=primariesin=bt2020:transferin=smpte2084:matrixin=bt2020nc:rangein=pc:transfer=linear,tonemap=hable:param=0.55:desat=0,zscale=primaries=bt709:transfer=iec61966-2-1:matrix=bt709:range=pc,eq=saturation=1.35,format=rgb24" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "unsharp=5:5:0.8,zscale=primariesin=bt2020:transferin=smpte2084:rangein=pc:transfer=linear,tonemap=hable:param=0.55:desat=0,zscale=primaries=bt709:transfer=iec61966-2-1:range=pc,eq=saturation=1.35,format=rgb24" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t ppm - | ^ffmpeg -hide_banner -loglevel error -f image2pipe -vcodec ppm -i - -vf "zscale=transferin=smpte2084:transfer=linear,tonemap=hable:param=0.50:desat=0,zscale=transfer=iec61966-2-1,eq=contrast=1.06:gamma=1.04:saturation=1.35,format=rgb24" -f image2pipe -vcodec png - | ^wl-copy --type image/png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 8x50% png:- | ^wl-copy --type image/png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 8x50% -modulate 92,135,100 -clamp png:- | ^wl-copy --type image/png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma +sigmoidal-contrast 8x50% -modulate 92,135,100 -clamp png:- | ^wl-copy --type image/png
+yay -S imv
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma +sigmoidal-contrast 8x50% -modulate 92,135,100 -clamp png:- | ^wl-copy --type image/png | ^imv -
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma +sigmoidal-contrast 8x50% -modulate 92,135,100 -clamp png:- | ^wl-copy --type image/png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 8x50% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 10x25% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 8x25% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 8x75% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 10x60% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 10x66% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 10x63% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - -gravity Center -crop 100x74%+0+0 +repage -auto-level -auto-gamma -sigmoidal-contrast 10x60% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 10x60% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% -g 0.9 /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% -gamma 0.9 /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% -gamma 1.2 /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% -gamma 0.6 /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% -gamma 0.7 /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% -gamma 0.8 /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% -gamma 0.8 -level 0,90% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma -sigmoidal-contrast 8x60% -gamma 0.8 -level 0,80% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x60% -gamma 0.8 -level 0,80% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x60% -gamma 0.8 -level 0,90% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x60% -gamma 1.0 -level 0,90% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x80% -gamma 1.0 -level 0,90% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x60% -gamma 1.0 -level 0,90% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x60% -gamma 1.2 -level 0,90% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x60% -gamma 1.2 -level 0,100% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 6x60% -gamma 1.2 -level 0,100% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 6x100% -gamma 1.2 -level 0,100% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 6x50% -gamma 1.2 -level 0,100% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x50% -gamma 1.2 -level 0,100% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+hyprland --list-monitor
+hyprctl
+hyprctl list
+hyprctl monitors
+hyprctl monitors -j
+ncim ~/.config/hakone/hypr-scripts/screenshot.nu
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu
+~/.config/hakone/hypr-scripts/screenshot.nu
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu
+~/.config/hakone/hypr-scripts/screenshot.nu
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu
+^grim -t png - | ^magick - +repage -sigmoidal-contrast 8x50% -gamma 1.2 -level 0,100% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu
+^grim -t png - | ^magick - +repage -auto-level -auto-gamma /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu
+^grim -t png - | ^magick - +repage -auto-level -sigmoidcontrast 8x80% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -sigmoid-contrast 8x80% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu
+^grim -t png - | ^magick - +repage -auto-level -sigmoidal-contrast 8x80% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -sigmoidal-contrast 8x100% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -sigmoidal-contrast 6x100% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -sigmoidal-contrast 6x60% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+^grim -t png - | ^magick - +repage -auto-level -sigmoidal-contrast 6x65% /tmp/hakone-preview.png; ^imv /tmp/hakone-preview.png
+nvim ~/.config/hakone/hypr-scripts/screenshot.nu
+cat ~/.config/hakone/hypr-scripts/screenshot.nu | wl-copy
+hyprctl -j monitors | from json
+hyprctl -j monitors | from json | transpose
+hyprctl -j monitors | from json | transpose | inspect
+hyprctl -j monitors
+cd ~/.config/hakone/
+ls
+cd hypr-scripts/
+ls
+cd ../
+ls
+nvim .
+nvim ~/.config/nvim/lua/plugins/nu.lua
+nvim .
+nvim ~/.config/nvim/lua/plugins/nu.lua
+ls
+cd ~/.config/nvim/lua/
+ls
+cd plugins/
+ls
+cat example.lua 
+ls
+mv nu.lua treesitter.lua
+ls
+nvim treesitter.lua 
+nvim example.lua 
+nvim treesitter.lua 
+mv treesitter.lua nu.lua
+ls
+cd ~/.config/hakone/
+ls
+nvim .
+nvim ~/.config/nvim/lua/plugins/nu.lua 
+nvim .
+nvim ~/.config/nvim/lua/plugins/nu.lua 
+cd ~/.config/hakone/
+slurp -w | str trim
+slurp
+hyprctl
+hyprctl activewindow
+grim -g "867,42 846,1386" - | wl-copy
+grim -g "867,42 846z1386" - | wl-copy
+grim -g "867,42 846x1386" - | wl-copy
+let g = (slurp)
+g
+$g
+let g = [slurp]
+g
+$g
+do { $g }
+hyprctl activewindow
+hyprctl activewindow -j
+hyprctl activewindow -j | as json
+hyprctl activewindow -j | json
+hyprctl activewindow -j | from json
+hyprctl activewindow -j | from json | get at
+hyprctl activewindow -j | from json | get at | concat ,
+hyprctl activewindow -j | from json | get at | to csv
+hyprctl activewindow -j | from json | get at | str
+hyprctl activewindow -j | from json | get at
+hyprctl activewindow -j | from json | get at | str join | ','
+hyprctl activewindow -j | from json | get at
+hyprctl activewindow -j | from json | get at | str join ','
+hyprctl activewindow -j | from json
+hyprctl activewindow -j | from json | size
+hyprctl activewindow -j | from json | get size
+hyprctl activewindow -j | from json | get size | str join 'x'
+hyprctl monitors -j
+hyprctl monitors -j | from json
+hyprctl monitors -j | from json | find-by id == 0
+hyprctl monitors -j | from json | where id == 0
+hyprctl monitors -j | from json | where id == 0 | first
+slurp
+hyprctl monitors -j | from json
+hyprctl activewindow -j | from json | get monitor
+ls ~
+now
+date
+date now
+date now | format date "%Y%m%d_%H%M%S%3f"
+cd ~/.config/hakone/
+ls
+./hypr-scripts/screenshot.nu
+./hypr-scripts/screenshot.nu:w
+./hypr-scripts/screenshot.nu
+./hypr-scripts/screenshot.nu --region
+./hypr-scripts/screenshot.nu --window
+nvim ~/.config/hypr/monitors.conf 
+./hypr-scripts/screenshot.nu --window
+./hypr-scripts/screenshot.nu
+nvim ~/.config/hypr/monitors.conf 
+nvim ~/.config/hypr/appearance.conf 
+nvim ~/.config/hypr/monitors.conf 
+slurpnvim ~/.config/hypr/appearance.conf
+nvim ~/.config/hypr/appearance.conf
+yay -R alacritty kitty
+yay -S nerd-fonts-fira-code
+yay ttf-firacode-nerd 
+fc-list 
+fc-list : family | lines
+fc-list : family
+fc-list
+fc-list : family
+fc-list
+fc-list | lines | parse "{path}: {family}:style={style}"
+fc-list | lines | parse "{path}: {family}:style={style}" | select family style
+nvim .
+exit
+fc-list | lines | parse "{path}: {family}:style={style}" | split column styles ','
+fc-list | lines | parse "{path}: {family}:style={style}" | update style {|row| $row.style | split row "," }
+fc-list --help
+fc-list -b
+cd ../
+ls
+cd nushell/
+ls
+nvim 
+exit
+cd ~/.config/nushell/
+ls
+nvim config.nu 
+exit
+ls
+nvim config.nu 
+cd ~/.config/nushell/
+ls
+nvim .
+exit
+ls
+cd ~/.config/nushell/
+ls
+cd commands/
+mv fc-list.nu fonts.nu
+ls
+cd ../
+ls
+nvim commands.nu 
+exit
+ls
+rm -r Kanagawa-GKT-Theme/
+ls
+fc-list
+exit
+fc-list
+cd ~/.config/nushell/
+nvim .
+exit
+fc-list
+fc-list | lines | parse "{path}: {family}:style={style}" | update style {|row| $row.style | split row "," }
+nvim ~/.config/nushell/commands/fonts.nu 
+exit
+fc-list
+help fc-list
+which fc-list
+nvim ~/.config/nushell/commands/fonts.nu 
+ls
+nvim ~/.config/nushell/commands.nu 
+nvim ~/.config/nushell/commands/fonts.nu 
+exit
+fclist
+fc-list
+nvim ~/.config/nushell/commands/fonts.nu 
+fc-list
+exit
+fc-list
+fc-list | where family =~ 'FiraCode'
+fc-list | where family =~ 'Cascadyia'
+fc-list | where family =~ 'Cascadya'
+fc-list | where family =~ 'Cascaydia'
+fc-list | where family =~ 'Caskaydia'
+fc-list | where family =~ 'Caskaydia' | select family
+yay -s nerd-fonts-
+yay -Ss fira
+nvim ~/.config/hypr/bindings/utilities.conf 
+yay -S nerd-fonts
+yay -S ttf-firacode-nerd
+fc-list | where family =~ 'Fira' | select family
+ls
+cd ~/.config/hypr/
+nvim .
+hyprctl clients -j | from json | get 4
+ls
+cd window-rules/
+ls
+nvim pop.conf
+cd ../
+ls
+nvim window-rules.conf 
+ls
+cd window-rules/
+ls
+mv pop.conf pip.conf
+cd ../
+rm window-rules/zen.conf
+ls
+nvim window-rules.conf 
+fc-list | where family =~ 'Fira' | select family
+ls
+config nu
+exit
+exit
+fc-list | where family =~ 'Fira' | select family
+nvim ~/.config/waybar/config.jsonc 
+cd ~/.config/hypr/
+ls
+nvim .
+waybar --help
+cd ../
+cd waybar/
+ls
+nvim config.jsonc 
+exot
+exit
+ls
+exit
+poweroff
+nvim ~/.config/hypr/monitors.conf 
+exit
+cd ~/.config/hypr/
+nvim .
+exit
+waybar -l
+cd ~/.config/hypr/
+;s
+ls
+cd ~/.config/waybar/
+nvim .
+exit
+env GTK_DEBUG=interactive waybar
+exit
+cd code
+cd ~/.config/waybar/
+ls
+nvim config.jsonc 
+reboot
+yay -S sunshine-git
+yay -S sunshine-bin
+exit
+exit
+cd ~/Downloads/
+ls
+unzip "Expedition 33 Coop-318-v0-9-2-1754060387.zip" exp
+unzip "Expedition 33 Coop-318-v0-9-2-1754060387.zip"
+ls
+mv expedition33* `/games/SteamLibrary/steamapps/common/Expedition 33/Sandfall/Content/Paks/~mods/`
+mkdir `/games/SteamLibrary/steamapps/common/Expedition 33/Sandfall/Content/Paks/~mods/`
+mv expedition33* `/games/SteamLibrary/steamapps/common/Expedition 33/Sandfall/Content/Paks/~mods/`
+exit
+ip addr
+sudo systemctl list-units --type=service | grep -E 'ufw|firewalld'
+systemctl stop firewalld
+systemctl disable firewalld
+killall -SIGINT sunshine
+sunshine
+nvim ~/.config/hypr/monitors.conf 
+systemctl --user status sunshine
+systemctl --user restart sunshine
+systemctl --user status sunshine
+poweroff
+exit
+nslookup
+exit
+nvim ~/.config/hypr/monitors.conf 
+exit
+poweroff
+nslookup
+exit
+poweroff
+exit
+poweroff
+nvim ~/.config/hypr/monitors.conf 
+exit
+ip addr
+ls
+cd ~/Downloads/
+ls
+nvim Wireguard-Adalind-Linux.conf 
+ls
+nvim Wireguard-Adalind-Linux.conf 
+exit
+nvim ~/.config/hypr/monitors.conf 
+exit
+poweroff
+exit
+nvim ~/.config/hypr/monitors.conf 
+exit
+180 * 2
+exit
+nvim ~/.config/hypr/bindings/utilities.conf 
+exit
+yay -S protontricks
+yay -Syu
+exit
+cd ~/.steam/steam
+ls
+cd steamapps/common/
+ls
+cd ../
+ls
+cd compatdata/
+ls
+cd 0/
+ls
+cd ~/
+/
+ls
+yay -S protontricks
+protontricks 3556750 -q ucrtbase2019 vcrun2003 vcrun2005
+protontricks 3556750 -q ucrtbase2019
+exit
+exit
+systemctl --user restart wireplumber.service 
+exit
+nvim ~/.config/hypr/bindings/utilities.conf 
+nvim ~/.config/hypr/monitors.conf 
+nvim ~/.config/waybar/config.jsonc 
+yay -S impala
+impala
+systemctl start iwd
+systemctl status iwd
+yay -R iwd
+nmtui
+nm-applet
+yay -S nm-applet
+nvim ~/.config/waybar/config.jsonc 
+hyprctl reload
+pkill waybar && waybar &
+pkill waybar and waybar &
+pkill waybar
+waybar &
+^waybar &
+job spawn { waybar }
+pkill waybar
+pkill waybar; job spawn { waybar }
+pkill waybar and job spawn { waybar }
+job spawn { waybar }
+nvim ~/.config/waybar/config.jsonc 
+pkill waybar and job spawn { waybar }
+pkill waybar
+job spawn { waybar }
+pkill waybar
+nvim ~/.config/waybar/config.jsonc 
+pkill waybar
+job spawn { waybar }
+pkill waybar
+nvim ~/.config/waybar/config.jsonc 
+job spawn { waybar }
+nvim ~/.config/waybar/config.jsonc 
+pkill waybar
+job spawn { waybar }
+pkill waybar
+nvim ~/.config/waybar/config.jsonc 
+job spawn { waybar }
+pkill waybar
+nvim ~/.config/waybar/config.jsonc 
+pkill waybar
+job spawn { waybar }
+pkill waybar
+nvim ~/.config/waybar/config.jsonc 
+job spawn { waybar }
+nvim ~/.config/waybar/config.jsonc 
+blueberry
+yay -S blueberry
+ls
+nvim ~/.config/waybar/config.jsonc 
+pamixer
+yay -S pamixer
+pamixer
+pamixer -t
+pamixer --help
+pamixer --get-volume
+pamixer --get-volume -d 10
+pamixer --get-volume -d 50
+pamixer --get-volume -i 60
+pamixer --get-volume -i 10
+nvim ~/.config/waybar/config.jsonc 
+ls
+nvim ~/.config/waybar/style.css 
+pkill waybar
+job spawn { waybar }
+nvim ~/.config/waybar/style.css 
+pkill waybar
+job spawn { waybar }
+pkill waybar
+job spawn { waybar }
+nvim ~/.config/waybar/style.css 
+pkill waybar
+job spawn { waybar }
+nvim ~/.config/waybar/style.css 
+pkill waybar
+job spawn { waybar }
+nvim ~/.config/waybar/style.css 
+pkill waybar
+job spawn { waybar }
+pkill waybar
+nvim ~/.config/waybar/style.css 
+pkill waybar
+job spawn { waybar }
+nvim ~/.config/waybar/style.css 
+waybar
+nvim ~/.config/waybar/style.css 
+waybar
+job spawn { waybar }
+exit
+reboot
+nvim ~/.config/hypr/monitors.conf 
+exit
+nvim ~/.config/hypr/monitors.conf 
+exit
+gamescope --hdr-enabled --steam -- env DXVK_HDR=1 steam
+yay -S gamescope
+gamescope --hdr-enabled --steam -- env DXVK_HDR=1 steam
+gamescope -w 3440 -h 1440 -W 3440 -H 1440 -f --hdr-enabled --steam -e -- env DXVK_HDR=1 /usr/bin/steam -tenfoot
+nvim ~/.config/hypr/monitors.conf 
+gamescope -w 3440 -h 1440 -W 3440 -H 1440 -f --hdr-enabled --steam -e -- env DXVK_HDR=1 /usr/bin/steam -tenfoot
+nvim ~/.config/hypr/monitors.conf 
+DXVK_HDR=1 gamescope -f --hdr-enabled -- %command%
+nvim ~/.config/hypr/bindings.conf 
+nvim ~/.config/hypr/monitors.conf 
+gamescope -f --hdr-enabled -- %command%
+sudo pacman -S vulkan-tools vulkan-icd-loader
+sudo pacman -S mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon
+gamescope -w 3440 -h 1440 -W 3440 -H 1440 -f --hdr-enabled --steam -e -- env DXVK_HDR=1 /usr/bin/steam -tenfoot
+vulkaninfo | grep -A2 VK_KHR_wayland_surface
+cat ~/.config/hypr/startup.conf 
+uwsm gamescope -w 3440 -h 1440 -W 3440 -H 1440 -f --hdr-enabled --steam -e -- env DXVK_HDR=1 /usr/bin/steam -tenfoot
+yay -S seatd
+yay -R gamescope
+yay -S gamescope-plus
+yay -S openvr
+yay -S gamescope-plus
+yay -Syu
+yay -S gamescope-git
+gamescope -w 3440 -h 1440 -W 3440 -H 1440 -f --hdr-enabled --steam -e -- env DXVK_HDR=1 /usr/bin/steam -tenfoot
+gamescope -w 3440 -h 1440 -W 3440 -H 1440 -f --backend sdl --hdr-enabled --steam -e -- env DXVK_HDR=1 /usr/bin/steam -tenfoot
+killall gamescope
+ps aux
+ps
+killall -9 gamescope-wl
+gamescope -w 3440 -h 1440 -W 3440 -H 1440 -f --backend sdl --hdr-enabled --steam -e -- env DXVK_HDR=1 /usr/bin/steam
+nvim ~/.config/hypr/monitors.conf 
+gamescope -w 3440 -h 1440 -W 3440 -H 1440 -f --backend sdl --hdr-enabled --steam -e -- env DXVK_HDR=1 /usr/bin/steam -tenfoot
+exit
+exi
+exit
+exit
+cd ~/.local/share/
+git clone git@github.com:caelestia-dots/caelestia.git
+yay -S gnome-keyring
+git status
+gnome-keyring
+yay -S seahorse
+nvim /etc/pam.d/login 
+nvim /etc/pam.d/greetd
+sudo nvim /etc/pam.d/greetd
+reboot
+which loginctl
+yay -S fish
+cd ~/.local/share/
+ls
+cd caelestia/
+ls
+cd ~/.config/
+ls
+rm -r vivaldi*
+ls
+chezmoi add ghostty/ gtk-* hakone/ hypr/ mako/ menus/ nushell/ obsidian/
+chezmoi add walker waybar/
+git status
+chezmoi cd
+chezmoi add ghostty/ gtk-* hakone/ hypr/ mako/ menus/ nushell/ obsidian/ walker/ waybar/
+chezmoi init git@github.com:chris-syntax/dotfiles.git
+chezmoi cd
+chezmoi git@github.com:chris-syntax/dotfiles.git --purge
+chezmoi init git@github.com:chris-syntax/dotfiles.git --purge
+chezmoi cd
+chezmoi init git@github.com:chris-syntax/dotfiles.git
+chezmoi cd
