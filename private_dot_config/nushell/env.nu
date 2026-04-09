@@ -16,8 +16,12 @@
 #
 # You can remove these comments if you want or leave
 # them for future reference.
+## ${UserConfigDir}/nushell/env.nu
+$env.PATH = ($env.PATH | prepend '/home/faore/.local/bin')
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+mkdir $"($nu.cache-dir)"
+carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
 
-$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
-mkdir ~/.cache/carapace
-carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
-source ~/.cache/carapace/init.nu
+
+let mise_path = $nu.default-config-dir | path join mise.nu
+^mise activate nu | save $mise_path --force

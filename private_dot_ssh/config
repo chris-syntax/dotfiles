@@ -1,0 +1,50 @@
+
+IdentityFile ~/.ssh/personal.pub
+
+Host *
+    IdentityAgent ~/.1password/agent.sock
+    IgnoreUnknown UseKeychain
+    UseKeychain yes
+    AddKeysToAgent yes
+    ForwardAgent yes
+    ForwardX11 yes
+    IdentitiesOnly yes
+
+
+Host work-github github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/work.pub
+
+Host work-gist github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/work.pub
+
+Host personal-github github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/personal.pub
+
+Host personal-gist github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/personal.pub
+
+Host glacier glacier.int.sea.wa.us.admt.im
+    HostName glacier.int.sea.wa.us.admt.im
+    User admin
+    IdentityFile ~/.ssh/personal.pub
+    Port 20
+
+Host uwutah uwutah.admt.im
+  HostName uwutah.admt.im
+  User root
+  IdentityFile ~/.ssh/personal.pub
+  Port 22
+
+Host docker-uwutah
+  HostName uwutah.admt.im
+  User root
+  IdentityFile ~/.ssh/personal.pub
+  Port 22100

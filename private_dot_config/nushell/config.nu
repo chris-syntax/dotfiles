@@ -18,8 +18,16 @@
 #     config nu --doc | nu-highlight | less -R
 #
 
+source $"($nu.cache-dir)/carapace.nu"
 source ./commands.nu
 
 $env.EDITOR = "nvim"
 $env.config.show_banner = false
 $env.config.buffer_editor = "nvim"
+
+# Setup Mise
+use ($nu.default-config-dir | path join mise.nu)
+
+# Setup Starship
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
