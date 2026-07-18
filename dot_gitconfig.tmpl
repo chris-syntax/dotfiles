@@ -1,12 +1,16 @@
 [user]
 	name = Chris Thomas
 	email = "me@cthomas.dev"
-	signingkey = 85450BE38C34576B
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEpzcumBYnSNokMSUxQwRRPN3VoECVehczol230FJ6+G
 [core]
   pager = delta
 	excludesfile = {{ joinPath .chezmoi.homeDir ".gitignore_global" }}
 [interactive]
   diffFilter = delta --color-only
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = {{ if eq .chezmoi.os "darwin" }}"/Applications/1Password.app/Contents/MacOS/op-ssh-sign"{{ else }}/opt/1Password/op-ssh-sign{{ end }}
 [commit]
 	gpgsign = true
 	template = {{ joinPath .chezmoi.homeDir ".stCommitMsg" }}

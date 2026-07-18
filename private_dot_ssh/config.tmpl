@@ -2,7 +2,7 @@
 IdentityFile ~/.ssh/personal.pub
 
 Host *
-    IdentityAgent ~/.1password/agent.sock
+    IdentityAgent {{ if eq .chezmoi.os "darwin" }}"~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"{{ else }}~/.1password/agent.sock{{ end }}
     IgnoreUnknown UseKeychain
     UseKeychain yes
     AddKeysToAgent yes
@@ -38,13 +38,7 @@ Host glacier glacier.int.sea.wa.us.admt.im
     Port 20
 
 Host uwutah uwutah.admt.im
-  HostName uwutah.admt.im
-  User root
-  IdentityFile ~/.ssh/personal.pub
-  Port 22
-
-Host docker-uwutah
-  HostName uwutah.admt.im
-  User root
-  IdentityFile ~/.ssh/personal.pub
-  Port 22100
+    HostName uwutah.admt.im
+    User faore
+    IdentityFile ~/.ssh/personal.pub
+    Port 22
