@@ -1,0 +1,84 @@
+# Helix language config — Rust + Ruby
+# Aria's setup for Chris
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Language Servers
+# ─────────────────────────────────────────────────────────────────────────────
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+cargo.features = "all"
+procMacro.enable = true
+inlayHints.bindingModeHints.enable = true
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+
+[language-server.ruby-lsp.config]
+diagnostics = true
+formatting = true
+codeLens = true
+documentSymbols = true
+foldingRanges = true
+selectionRanges = true
+semanticHighlighting = true
+completion = true
+hover = true
+inlayHint = true
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Debug Adapters
+# ─────────────────────────────────────────────────────────────────────────────
+# codelldb is installed at /usr/bin/codelldb (codelldb-bin from AUR).
+# Use :debug-start in Helix to launch.
+
+[[language]]
+name = "rust"
+auto-format = true
+language-servers = ["rust-analyzer"]
+formatter = { command = "rustfmt", args = ["--edition", "2024"] }
+
+[language.debugger]
+name = "codelldb"
+transport = "tcp"
+command = "codelldb"
+args = ["--port", "{}"]
+port-arg = "--port {}"
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+completion = [{ name = "binary", completion = "filename" }]
+args = { program = "{0}" }
+
+[[language.debugger.templates]]
+name = "binary (terminal)"
+request = "launch"
+completion = [{ name = "binary", completion = "filename" }]
+args = { program = "{0}", runInTerminal = true }
+
+[[language.debugger.templates]]
+name = "attach"
+request = "attach"
+completion = ["pid"]
+args = { pid = "{0}" }
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Ruby
+# ─────────────────────────────────────────────────────────────────────────────
+
+[[language]]
+name = "ruby"
+auto-format = true
+language-servers = ["ruby-lsp"]
+# ruby-lsp delegates formatting to rubocop/standard automatically when present.
+# If you want to force rubocop as an external formatter instead, uncomment:
+# formatter = { command = "rubocop", args = ["--server", "--stdin", "%{buffer_name}", "-x", "--stderr"] }

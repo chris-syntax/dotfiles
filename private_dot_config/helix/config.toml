@@ -1,0 +1,59 @@
+# Helix editor config — Aria's setup for Chris
+# Reload in-editor with :config-reload, or restart helix.
+
+theme = "tokyonight"
+
+[editor]
+line-number = "relative"
+mouse = true
+bufferline = "multiple"
+color-modes = true
+cursorline = true
+true-color = true
+auto-format = true
+auto-save = false
+completion-trigger-len = 1
+idle-timeout = 50
+rulers = [100]
+end-of-line-diagnostics = "hint"
+
+[editor.statusline]
+left  = ["mode", "spinner", "version-control", "file-name", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 1
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+auto-signature-help = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "error"
+
+[editor.soft-wrap]
+enable = false  # flip to true if you want long lines wrapped instead of horizontal scroll
+
+[keys.normal]
+# Quick window/buffer nav
+"C-h" = "jump_view_left"
+"C-j" = "jump_view_down"
+"C-k" = "jump_view_up"
+"C-l" = "jump_view_right"
+# Quick save
+"space".w = ":write"
+# Toggle inlay hints
+"space".h = ":toggle lsp.display-inlay-hints"
