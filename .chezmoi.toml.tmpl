@@ -1,3 +1,2 @@
 [cd]
-command = "/opt/homebrew/bin/nu"
-#command = "/usr/bin/nu"
+command = {{ if eq .chezmoi.os "darwin" }}"/opt/homebrew/bin/nu"{{ else }}"/usr/bin/nu"{{ end }}
