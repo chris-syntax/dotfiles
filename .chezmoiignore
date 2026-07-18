@@ -1,0 +1,14 @@
+{{/* KDE / Plasma is Linux-only — keep these off macOS and anything non-Linux */}}
+{{ if ne .chezmoi.os "linux" }}
+.config/kdeglobals
+.config/kglobalshortcutsrc
+.config/kwinrc
+.config/kxkbrc
+.config/kcminputrc
+.config/plasmarc
+.config/ksmserverrc
+.config/dolphinrc
+.config/plasma-org.kde.plasma.desktop-appletsrc
+.local/share/plasma/wallpapers
+Pictures/Wallpapers
+{{ end }}
