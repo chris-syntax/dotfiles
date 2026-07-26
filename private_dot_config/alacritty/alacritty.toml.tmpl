@@ -1,13 +1,25 @@
+[terminal]
+# Launch Nushell as a login shell so login.nu runs and PATH/env is rebuilt.
+shell = { program = "{{ if eq .chezmoi.os "darwin" }}/opt/homebrew/bin/nu{{ else }}/usr/bin/nu{{ end }}", args = ["--login"] }
+
 [env]
 TERM = "xterm-256color"
 WINIT_X11_SCALE_FACTOR = "1"
 
+{{ if eq .chezmoi.os "darwin" }}
+[window]
+decorations = "Transparent"
+opacity = 0.85
+padding = { x = 8, y = 8 }
+dynamic_title = true
+{{ else }}
 [window]
 dynamic_padding = true
 decorations = "full"
 opacity = 0.8
 decorations_theme_variant = "Dark"
 blur = true
+{{ end }}
 
 [window.dimensions]
 columns = 100
@@ -50,22 +62,22 @@ cyan = "0x0db9d7"
 white = "0xacb0d0"
 
 [font]
-size = 12
+size = {{ if eq .chezmoi.os "darwin" }}16{{ else }}12{{ end }}
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "{{ if eq .chezmoi.os "darwin" }}FiraCode Nerd Font Mono{{ else }}FiraCode Nerd Font{{ end }}"
 style = "Regular"
 
 [font.bold]
-family = "FiraCode Nerd Font"
+family = "{{ if eq .chezmoi.os "darwin" }}FiraCode Nerd Font Mono{{ else }}FiraCode Nerd Font{{ end }}"
 style = "Bold"
 
 [font.italic]
-family = "FiraCode Nerd Font"
+family = "{{ if eq .chezmoi.os "darwin" }}FiraCode Nerd Font Mono{{ else }}FiraCode Nerd Font{{ end }}"
 style = "Italic"
 
 [font.bold_italic]
-family = "FiraCode Nerd Font"
+family = "{{ if eq .chezmoi.os "darwin" }}FiraCode Nerd Font Mono{{ else }}FiraCode Nerd Font{{ end }}"
 style = "Bold Italic"
 
 [selection]

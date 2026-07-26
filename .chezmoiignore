@@ -1,5 +1,5 @@
 {{/* KDE / Plasma is Linux-only — keep these off macOS and anything non-Linux */}}
-{{ if ne .chezmoi.os "linux" }}
+{{ if ne .chezmoi.os "linux" -}}
 .config/kdeglobals
 .config/kglobalshortcutsrc
 .config/kwinrc
@@ -11,4 +11,10 @@
 .config/plasma-org.kde.plasma.desktop-appletsrc
 .local/share/plasma/wallpapers
 Pictures/Wallpapers
-{{ end }}
+{{ end -}}
+{{ if ne .chezmoi.os "darwin" -}}
+{{/* macOS-only: Nushell login-shell bootstrap */}}
+Library/**
+{{ end -}}
+{{/* machine-local, never managed */}}
+.config/nushell/secrets.nu

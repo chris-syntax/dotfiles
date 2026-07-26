@@ -1,33 +1,22 @@
-# config.nu
+# config.nu — shared, cross-platform Nushell configuration  (chezmoi: all OSes)
 #
-# Installed by:
-# version = "0.106.1"
-#
-# This file is used to override default Nushell settings, define
-# (or import) custom commands, or run any other startup tasks.
-# See https://www.nushell.sh/book/configuration.html
-#
-# Nushell sets "sensible defaults" for most configuration settings, 
-# so your `config.nu` only needs to override these defaults if desired.
-#
-# You can open this file in your default editor using:
-#     config nu
-#
-# You can also pretty-print and page through the documentation for configuration
-# options using:
-#     config nu --doc | nu-highlight | less -R
-#
+# Loaded after env.nu. Tool integrations are generated in env.nu with an
+# empty-file fallback, so these source/use lines never fail even when a tool
+# is missing (e.g. carapace not installed). Completions: carapace. Prompt:
+# starship.
 
-source $"($nu.cache-dir)/carapace.nu"
-source ./commands.nu
-
-$env.EDITOR = "nvim"
 $env.config.show_banner = false
-$env.config.buffer_editor = "nvim"
+$env.config.buffer_editor = 'nvim'
+$env.config.edit_mode = 'emacs'
 
-# Setup Mise
-use ($nu.default-config-dir | path join mise.nu)
+# --- Tool integrations (generated in env.nu; empty-file-safe) ---------------
+source ($nu.cache-dir | path join 'carapace.nu')
+use ($nu.default-config-dir | path join 'mise.nu')
+use ($nu.cache-dir | path join 'starship.nu')
+source ($nu.cache-dir | path join 'zoxide.nu')
 
-# Setup Starship
-mkdir ($nu.data-dir | path join "vendor/autoload")
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+# --- Machine-local secrets (chezmoi-ignored) --------------------------------
+source ~/.config/nushell/secrets.nu
+
+# --- Custom commands --------------------------------------------------------
+source ./commands.nu
