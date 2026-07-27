@@ -62,7 +62,7 @@
       "liga": true
     },
     "shell": {
-      "program": "/usr/bin/nu"
+      "program": "{{ if eq .chezmoi.os "darwin" }}/opt/homebrew/bin/nu{{ else }}/usr/bin/nu{{ end }}"
     }
   }
 }

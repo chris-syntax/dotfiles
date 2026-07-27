@@ -4,7 +4,9 @@ shell = { program = "{{ if eq .chezmoi.os "darwin" }}/opt/homebrew/bin/nu{{ else
 
 [env]
 TERM = "xterm-256color"
+{{ if ne .chezmoi.os "darwin" -}}
 WINIT_X11_SCALE_FACTOR = "1"
+{{ end -}}
 
 {{ if eq .chezmoi.os "darwin" }}
 [window]
